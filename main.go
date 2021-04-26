@@ -24,6 +24,12 @@ func Calculate(num1 int, num2 int) int {
 	return num1 + num2
 }
 
+func HitungPajak(result int) (resTax int, resSum int) {
+	resTax = (result / 100) * 1
+	resSum = (result - resTax)
+	return
+}
+
 func main() {
 	// 3rd party
 
@@ -33,6 +39,8 @@ func main() {
 	}
 
 	fmt.Println(ac.FormatMoney(100000))
+
+	fmt.Println(HitungPajak(10000))
 
 	// result, err := calc.Calculator(1, 2, "add")
 
